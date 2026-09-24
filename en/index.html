@@ -214,7 +214,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .open-row{display:grid;grid-template-columns:1fr auto;gap:var(--s3);align-items:center;background:var(--card);border-radius:12px;padding:var(--s3) var(--s4);font-size:17px}
 .next{margin-top:var(--s3);font-size:14px;color:var(--dim);display:flex;gap:var(--s2);align-items:center}
 .next b{color:var(--ink);font-weight:600}
-@media(max-width:959px){.rail{position:sticky;top:84px;z-index:20;background:var(--bg);padding-block:var(--s2);overflow-x:auto}.rail .track{display:none}
+@media(max-width:959px){.rail{position:sticky;top:84px;z-index:20;background:var(--bg);padding-block:var(--s2);overflow-x:auto;scrollbar-width:none;box-shadow:0 -16px 0 var(--bg)}.rail::-webkit-scrollbar{display:none}.rail .track{display:none}
   .rail ol{flex-direction:row;gap:var(--s2)}.rail li a{font-family:var(--sans);font-size:14px;font-weight:500;background:var(--surface);border-radius:999px;padding:var(--s2) var(--s3);white-space:nowrap}
   .rail li a.on{background:var(--ink);color:var(--bg)}.panel{min-height:auto}.screen{padding:var(--s4);border-radius:20px}.goal,.task,.open-row{padding:var(--s3)}.task{grid-template-columns:1fr 120px}}
 
@@ -360,6 +360,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .qbubble p+p{margin-top:var(--s3)}
 .qavatar{width:44px;height:44px;border-radius:12px;background:var(--ink);display:grid;place-items:center}
 .qavatar svg{width:28px;height:24px;--c1:#3E9E86;--c3:#EE82AE}
+#qbtns .qans{padding:0 0 var(--s3)}#qbtns .qans h3,#qbtns .qavatar{display:none}#qbtns .qbubble{padding:var(--s4)}
 
 
 .final{background:var(--surface);color:var(--ink);text-align:center;padding-block:var(--s9);border-radius:32px;margin-inline:var(--s4)}
@@ -377,7 +378,7 @@ footer{padding-block:var(--s8) var(--s6)}
 .fcols{display:grid;gap:var(--s6);grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(min-width:900px){.fcols{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .fcols h4{font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:var(--s4)}
-.fcols a{display:block;color:var(--ink);text-decoration:none;font-size:17px;padding-block:4px}
+.fcols a{display:block;color:var(--ink);text-decoration:none;font-size:17px;padding-block:7px}
 .fcols a:hover{text-decoration:underline}
 
 .giant{margin-top:var(--s8);display:flex;align-items:center;gap:3cqw;container-type:inline-size}
@@ -547,7 +548,7 @@ footer{padding-block:var(--s8) var(--s6)}
             <div class="open-row"><span>Designer hire</span><span class="tag late">week 6</span></div>
             <div class="open-row"><span>Client report</span><span class="tag late">pushed back 3×</span></div>
             <div class="open-row"><span>Ad budget</span><span class="tag">skipped twice</span></div>
-            <div class="next"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h9M8 4l4 4-4 4"/></svg>next meeting’s agenda, <b>at the top</b></div></div></div>
+            <div class="next"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h9M8 4l4 4-4 4"/></svg><span>next meeting’s agenda, <b>at the top</b></span></div></div></div>
       </div>
     </div>
   </section>
@@ -584,7 +585,7 @@ footer{padding-block:var(--s8) var(--s6)}
         <h3>From anywhere</h3><p>Google Meet, Zoom, Microsoft Teams, Wispr, or just a file: plain text or audio. All it needs is a transcript.</p></div>
       <div><div class="mini m-ai">
           <span class="q">What did we decide today?</span>
-          <span class="a"><svg viewBox="8 8 53 47" aria-hidden="true"><use href="#mark"/></svg>Onboarding: yes. Report: third delay.</span>
+          <span class="a"><svg aria-hidden="true"><use href="#mark"/></svg>Onboarding: yes. Report: third delay.</span>
           <em>Claude · ChatGPT · via MCP</em></div>
         <h3>Inside your AI</h3><p>Plugs into Claude and ChatGPT via MCP. Ask in the chat what the meeting decided, and the answer is right there.</p></div>
       <div><div class="mini m-ppl">
@@ -606,7 +607,7 @@ footer{padding-block:var(--s8) var(--s6)}
         <g class="out"><rect x="720" y="66" width="260" height="68" rx="16" fill="#D3ECE4"/><text class="t1" x="740" y="92">WHAT WAS DECIDED</text><text class="t2" x="740" y="116">Onboarding yes, report no</text></g>
         <g class="out"><rect x="720" y="186" width="260" height="68" rx="16" fill="#FCE3BD"/><text class="t1" x="740" y="212">WHO’S ON IT</text><text class="t2" x="740" y="236">Anna: fixes. Hire: nobody</text></g>
         <g class="out"><rect x="720" y="306" width="260" height="68" rx="16" fill="#FAD6E4"/><text class="t1" x="740" y="332">BY WHEN</text><text class="t2" x="740" y="356">Friday, 26 September</text></g>
-        <text class="cap-s" x="108" y="432" text-anchor="middle">sources</text><text class="cap-s" x="500" y="300" text-anchor="middle">2 minutes</text><text class="cap-s" x="850" y="432" text-anchor="middle">chat · email · Claude · MCP</text>
+        <text class="cap-s" x="108" y="432" text-anchor="middle">sources</text><text class="cap-s" x="500" y="300" text-anchor="middle">2 minutes</text><text class="cap-s" x="850" y="432" text-anchor="middle">Telegram · Claude · ChatGPT</text>
       </svg>
       <svg class="v-mob" viewBox="0 0 360 700" role="img" aria-label="Diagram: sources pass through threeQ and come out as three answers">
         <g class="src" tabindex="0"><path class="fl in" d="M62 72 C 62 190, 180 190, 180 270"/><rect x="8" y="32" width="108" height="40" rx="20"/><use href="#ic-zoom" x="18" y="42" width="20" height="20"/><text x="44" y="57" style="font-size:14px">Zoom</text></g>
@@ -620,7 +621,7 @@ footer{padding-block:var(--s8) var(--s6)}
         <g class="out"><rect x="30" y="410" width="300" height="64" rx="16" fill="#D3ECE4"/><text class="t1" x="50" y="436">WHAT WAS DECIDED</text><text class="t2" x="50" y="459">Onboarding yes, report no</text></g>
         <g class="out"><rect x="30" y="490" width="300" height="64" rx="16" fill="#FCE3BD"/><text class="t1" x="50" y="516">WHO’S ON IT</text><text class="t2" x="50" y="539">Anna: fixes. Hire: nobody</text></g>
         <g class="out"><rect x="30" y="570" width="300" height="64" rx="16" fill="#FAD6E4"/><text class="t1" x="50" y="596">BY WHEN</text><text class="t2" x="50" y="619">Friday, 26 September</text></g>
-        <text class="cap-s" x="180" y="672" text-anchor="middle">chat · email · Claude · MCP</text>
+        <text class="cap-s" x="180" y="672" text-anchor="middle">Telegram · Claude · ChatGPT</text>
       </svg>
     </div>
   </section>
@@ -727,7 +728,7 @@ footer{padding-block:var(--s8) var(--s6)}
     </svg>
     <span class="gw" aria-hidden="true"><span>t</span><span>h</span><span>r</span><span>e</span><span>e</span><span class="q">Q</span></span>
   </div>
-  <div class="fbot"><span>© threeQ 2026 · working name</span><span>Examples on this page are made up for illustration.</span></div>
+  <div class="fbot"><span>© threeQ 2026</span><span>Examples on this page are made up for illustration.</span></div>
 </footer>
 
 <script>
@@ -813,7 +814,8 @@ if(!reduce){new IntersectionObserver(es=>es.forEach(v=>{onScreen=v.isIntersectin
 
 
 (()=>{const links=[...document.querySelectorAll('.rail a')], ind=document.getElementById('ind'), panels=[...document.querySelectorAll('.panel')];
-  let cur=-1;const set=i=>{if(i===cur)return;cur=i;links.forEach((a,j)=>a.classList.toggle('on',i===j));ind.style.top=(i*25)+'%';ind.style.background=['#2F7D6B','#F2A93B','#E0679B','#15161A'][i];};
+  let cur=-1;const set=i=>{if(i===cur)return;cur=i;links.forEach((a,j)=>a.classList.toggle('on',i===j));ind.style.top=(i*25)+'%';ind.style.background=['#2F7D6B','#F2A93B','#E0679B','#15161A'][i];
+    const rl=links[i].closest('.rail');if(rl.scrollWidth>rl.clientWidth){const d=links[i].getBoundingClientRect().left-rl.getBoundingClientRect().left-16;rl.scrollBy({left:d,behavior:reduce?'auto':'smooth'});}};
   let raf=0;const tick=()=>{raf=0;const c=innerHeight/2;let best=0,bd=1e9;panels.forEach((p,i)=>{const r=p.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-c);if(d<bd){bd=d;best=i;}});set(best);};
   addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(tick);},{passive:true});tick();
 })();
@@ -912,7 +914,10 @@ const qb=document.getElementById('qbtns'), bub=document.getElementById('qbubble'
 qb.innerHTML=FAQ.map((q,i)=>`<button role="tab" id="q${i}" aria-selected="${i===0}" data-i="${i}">${q[0]}</button>`).join('');
 const pick=i=>{qb.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',i===j));bub.style.opacity=0;
   setTimeout(()=>{bub.innerHTML=FAQ[i][1].map(p=>`<p>${p}</p>`).join('');bub.style.opacity=1;},reduce?0:150);};
-qb.addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(+b.dataset.i);});
+const qa=document.querySelector('.qans'), qhome=qa.parentElement, qmq=matchMedia('(max-width:760px)');
+const place=i=>{const b=document.getElementById('q'+i);if(qmq.matches){const y=b.getBoundingClientRect().top;b.after(qa);scrollBy(0,b.getBoundingClientRect().top-y);}else if(qa.parentElement!==qhome)qhome.appendChild(qa);};
+qb.addEventListener('click',e=>{const b=e.target.closest('button');if(b){pick(+b.dataset.i);place(+b.dataset.i);}});
+qmq.addEventListener('change',()=>place(+(qb.querySelector('[aria-selected="true"]')||{dataset:{i:0}}).dataset.i));place(0);
 bub.innerHTML=FAQ[0][1].map(p=>`<p>${p}</p>`).join('');
 
 
